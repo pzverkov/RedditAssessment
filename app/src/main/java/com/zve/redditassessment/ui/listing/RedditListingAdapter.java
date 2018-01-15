@@ -16,6 +16,8 @@ import com.zve.redditassessment.models.RedditObject;
 import java.util.ArrayList;
 import java.util.List;
 
+import hugo.weaving.DebugLog;
+
 /**
  * Created by Peter on 11.01.2018.
  */
@@ -67,6 +69,7 @@ public class RedditListingAdapter extends RecyclerView.Adapter<RedditListingAdap
         return links.size();
     }
 
+    @DebugLog
     public void setItems(List<RedditObject> items) {
         links.addAll(items);
         notifyDataSetChanged();

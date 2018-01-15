@@ -22,6 +22,7 @@ import javax.inject.Inject;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import hugo.weaving.DebugLog;
 
 /**
  * Created by Peter on 11.01.2018.
@@ -115,6 +116,7 @@ public class ListingActivity extends AppCompatActivity implements ListingView, R
         Toast.makeText(this, "There was a problem loading the listing", Toast.LENGTH_LONG).show();
     }
 
+    @DebugLog
     private void loadItems(int count, String after) {
         if (listingPresenter != null) {
             listingPresenter.loadItems(count, after);

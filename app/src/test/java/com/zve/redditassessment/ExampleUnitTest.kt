@@ -1,5 +1,6 @@
 package com.zve.redditassessment
 
+import com.zve.redditassessment.models.RedditComment
 import org.junit.Test
 
 import org.junit.Assert.*

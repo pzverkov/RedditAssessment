@@ -4,6 +4,7 @@ import com.zve.redditassessment.api.RedditService;
 import com.zve.redditassessment.models.RedditListing;
 import com.zve.redditassessment.models.RedditResponse;
 
+import hugo.weaving.DebugLog;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -26,6 +27,7 @@ public class ListingPresenterImpl implements ListingPresenter {
         mView = view;
     }
 
+    @DebugLog
     @Override
     public void loadItems(int count, String after) {
         if (mView != null && after.isEmpty()) {

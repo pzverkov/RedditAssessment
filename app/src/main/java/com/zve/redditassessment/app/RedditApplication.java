@@ -6,6 +6,8 @@ import com.zve.redditassessment.di.AppComponent;
 import com.zve.redditassessment.di.AppModule;
 import com.zve.redditassessment.di.DaggerAppComponent;
 
+import hugo.weaving.DebugLog;
+
 public class RedditApplication extends Application {
     private AppComponent appComponent;
     private static RedditApplication instance;
@@ -25,6 +27,7 @@ public class RedditApplication extends Application {
         return appComponent;
     }
 
+    @DebugLog
     protected AppComponent initDagger(RedditApplication application) {
         return DaggerAppComponent.builder()
                 .appModule(new AppModule(application))

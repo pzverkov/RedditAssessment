@@ -3,6 +3,7 @@ package com.zve.redditassessment.ui.listing
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import com.zve.redditassessment.app.ApplicationConstants
+import hugo.weaving.DebugLog
 import java.util.concurrent.atomic.AtomicBoolean
 import java.util.concurrent.atomic.AtomicInteger
 
@@ -15,6 +16,7 @@ class ScrollListener(private val onLoadListener: OnLoadListener) : RecyclerView.
     private val previousTotal: AtomicInteger = AtomicInteger(0)
     private val loading: AtomicBoolean = AtomicBoolean(true)
 
+    @DebugLog
     override fun onScrolled(recyclerView: RecyclerView?, dx: Int, dy: Int) {
         super.onScrolled(recyclerView, dx, dy)
 

@@ -15,7 +15,7 @@ import static org.mockito.Mockito.when;
  * Created by Peter on 15.01.2018.
  */
 
-class MockitoTest {
+public class MockitoTest {
 
     @Test
     public void testDepth()  {
